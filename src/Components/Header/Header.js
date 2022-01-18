@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../../Config/FirebaseConfig";
+import { signOut, onAuthStateChanged } from "firebase/auth";
 
 export const Header = () => {
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+  }, []);
+
   const navigate = useNavigate();
+  const logout = () => {
+    signOut(auth)
+      .then(() => {
+        localStorage.removeItem("token");
+        console.log("logout");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div className="navbar-section">
@@ -14,7 +34,9 @@ export const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <button className="">Logout</button>
+              <button className="" onClick={logout}>
+                Logout
+              </button>
             </li>
           </ul>
         </div>

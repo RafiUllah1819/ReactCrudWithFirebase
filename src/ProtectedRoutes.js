@@ -1,12 +1,16 @@
-import React from 'react';
-import { Header } from './Components/Header/Header';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import { Header } from "./Components/Header/Header";
+import { Outlet, Navigate } from "react-router-dom";
 
 export const ProtectedRoutes = () => {
-    return (
-        <div>
-            <Header />
-            <Outlet />            
-        </div>
-    )
-}
+  const token = localStorage.getItem("token") ? true : false;
+  console.log("token ", token);
+  return token ? (
+    <>
+      <Header />
+      <Outlet />
+    </>
+  ) : (
+    <Navigate to={{ pathname: "/" }} />
+  );
+};

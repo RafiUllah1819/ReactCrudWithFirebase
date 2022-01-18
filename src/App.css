@@ -1,4 +1,4 @@
-.form-section{
+.form-section {
   padding-top: 30px;
   width: 84%;
   margin-left: auto;
@@ -8,24 +8,25 @@
   margin-right: 9px;
   min-height: 454px;
 }
-input{
+input {
   height: 48px;
 }
 
-.form-check{
+.form-check {
   text-align: left;
 }
-h6{
+h6 {
   text-align: left;
   font-size: 23px;
 }
-label{
+label {
   font-size: 16px;
 }
-.list-group{width: 15%;
+.list-group {
+  width: 15%;
   position: absolute;
 }
-.list-group-item{
+.list-group-item {
   padding: 25px 0 25px 20px;
   text-align: left;
   font-size: 20px;
@@ -34,79 +35,90 @@ label{
   align-items: center;
   /* padding-top: 20px; */
 }
-.navbar-brand{
+.navbar-brand {
   width: 20%;
   text-align: left;
-  padding:25px 0 25px 20px;
+  padding: 25px 0 25px 20px;
   font-size: 20px;
 }
-nav{height: 73px;}
-a {text-decoration: none;font-size: 20px;}
-.navLink{text-decoration: none;color: #000;}
-.nav-link{font-size: 20px;}
-.dashbaord{height: 305px;
-  display: flex;
-    align-items: center;
-    justify-content: center;
+nav {
+  height: 73px;
 }
-.form-button{
+a {
+  text-decoration: none;
+  font-size: 17px;
+}
+.navLink {
+  text-decoration: none;
+  color: #000;
+}
+.nav-link {
+  font-size: 17px;
+}
+.dashbaord {
+  height: 305px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-button {
   max-width: 140px;
   display: flex;
 }
-button{
+button {
   max-width: 140px;
 }
-.collapse{
+.collapse {
   justify-content: end;
 }
-.collapse button{
+.collapse button {
   width: 111px;
-    height: 43px;
-    margin-right: 27px;
-    border-radius: 21px
+  height: 43px;
+  margin-right: 27px;
+  border-radius: 21px;
 }
-.edit{
+.edit {
   cursor: pointer;
   margin-right: 10px;
 }
-.trash{
+.trash {
   cursor: pointer;
   color: red;
 }
-.more a{
+.more a {
   font-size: 15px;
 }
-.card{
+.card {
   max-width: 600px;
   margin: 0 auto;
   /* margin-top: 40px; */
 }
-li{
+li {
   list-style-type: none;
 }
-.profile{
+.profile {
   font-size: 74px;
   margin: 0 auto;
-  margin-top: -32px
+  margin-top: -32px;
 }
-.card-title{
+.card-title {
   text-align: center;
   font-size: 36px;
   margin-bottom: 20px;
-
 }
-.sub-title {flex-wrap: wrap;
+.sub-title {
+  flex-wrap: wrap;
   margin: 25px 0 17px;
   border-bottom: 1px solid lightgray;
 }
-h5{
+h5 {
   width: 33%;
 }
-.card-details{
+.card-details {
   display: flex;
   flex-wrap: wrap;
 }
-.card-details li{
+.card-details li {
   list-style-type: none;
   width: 32%;
   border: 1px solid lightgray;
@@ -116,38 +128,42 @@ h5{
 }
 
 /* auth css start here */
-.auths{
+.auths {
   padding-top: 30px;
 }
-.auth{
+.auth {
   max-width: 600px;
   margin: 0 auto;
-  background-color: darkgray;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   padding: 50px 20px 200px;
   border-radius: 5px;
 }
-.auth input{
+.auth input {
   height: 48px;
 }
-.auth button{
+.auth button {
   display: flex;
   min-width: 84px;
   height: 42px;
   justify-content: center;
   align-items: center;
   margin-left: auto;
-  border-radius: 5px
+  border-radius: 5px;
 }
 /* p{padding-top: 25px;} */
-h1{
+h1 {
   text-align: center;
   color: #fff;
   padding-bottom: 30px;
 }
-.modal.fade .modal-dialog{max-width: 1200px;}
-.card-body{padding-bottom: 0;}
+.modal.fade .modal-dialog {
+  max-width: 1200px;
+}
+.card-body {
+  padding-bottom: 0;
+}
 
- 
 /* .logout{
   height: 58px;
     width: 149px;
@@ -156,16 +172,24 @@ h1{
     margin-right: 10px;
 } */
 
-.search-area .form-group{
+.search-area .form-group {
   max-width: 203px;
   margin-left: auto;
 }
-.search-area .form-control{
- height: 37px;
+.search-area .form-control {
+  height: 37px;
   margin-bottom: 10px;
 }
-.react-calender{
+.react-calender {
   max-width: 358px;
   margin: 0 auto;
   text-align: center;
+}
+.already {
+  text-align: right;
+  margin-top: 20px;
+}
+.already a{
+  margin-left: 10px;
+  font-style: italic;
 }

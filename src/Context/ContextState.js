@@ -3,7 +3,7 @@ import { ContextNode } from './Context';
 import { db } from '../Config/FirebaseConfig';
 import { collection, onSnapshot } from "firebase/firestore";
 
-export const ContextState = () => {
+export const ContextState = (props) => {
     const [persons, setPersons] = useState([]);
 
     useEffect(() => {
@@ -27,8 +27,8 @@ export const ContextState = () => {
     console.log("persons", persons);
     return (
         <div>
-            <ContextNode.Provider={}>
-
+            <ContextNode.Provider value={{persons}}>
+              {props.children}
             </ContextNode.Provider>
         </div>
     )

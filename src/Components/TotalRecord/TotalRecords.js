@@ -1,31 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "font-awesome/css/font-awesome.min.css";
 import { Link } from "react-router-dom";
-import { db } from "../../Config/FirebaseConfig";
-import { collection, onSnapshot } from "firebase/firestore";
+import { ContextNode } from "../../Context/Context";
 
 export const TotalRecords = () => {
-  const [persons, setPersons] = useState([]);
+  const {persons}  = useContext(ContextNode);
 
-  useEffect(() => {
-    const collectionRef = collection(db, "users");
-    const unsubscribe = onSnapshot(
-      collectionRef,
-      (snapshot) => {
-        if (!snapshot.empty) {
-          const updatedData = snapshot.docs.map((doc) => {
-            return { ...doc.data(), id: doc.id };
-          });
-          setPersons(updatedData);
-        }
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-    return () => unsubscribe();
-  }, []);
-  console.log("persons", persons);
+  console.log("persons of totalRcords", persons);
 
   return (
     <div className="form-section search-area">
